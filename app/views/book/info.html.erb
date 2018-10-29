@@ -1,6 +1,12 @@
-<h1>Book#info</h1>
-<p>Find me in app/views/book/info.html.erb</p>
+<h1>作成中</h1>
 
-<p>testページ</p>
+<p>今日は <%= @time %> です</p>
 
-<p><a href = "/list">一覧ページへ<a></p>
+<p>名前をいれてね！</p>
+<p>※カタカナかひらがなでいれてください</p>
+
+<%= form_tag({ :controller => 'book', :action => 'list' },
+  { :method => :post, :id => 'name'}) do %>
+  <%= text_field_tag :name, '', { :size => 25 } %>
+  <%= submit_tag '送信' %>
+<% end %>
