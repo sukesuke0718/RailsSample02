@@ -10,14 +10,15 @@ class BookController < ApplicationController
   def list
     @name = params[:name]
     @text = ""
+    # ランダムな数字を作成
     random = Random.new
 
+    # 入力が空白の時、
     if @name == "" then
-
       @text = "名前を入れてね"
-
+    # 入力されている場合、
     else
-
+      # 1~3のランダムな数字で分岐
       case  random.rand(1..3)
         when 1
           @text = "お帰りなさいませ\n" + @name + "様♡"
@@ -27,7 +28,7 @@ class BookController < ApplicationController
           end
           @text = @name + "にゃん、\n" + "おかえりにゃんにゃん♪"
         when 3
-          @text = "c"
+          @text = @name + "お兄ちゃん、\n" + "お帰りなさい"
         else
           @text = "残念ハズレ"
       end
