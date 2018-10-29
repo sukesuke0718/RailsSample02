@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookApp</title>
+    <title>Rails勉強中</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,9 @@
   </head>
 
   <body>
-    <h1><a href = "/">トップページへ</a></h1>
-
+    <header class = "top_page">
+      <h1><a href = "/">トップページへ</a></h1>
+    </header>
     <%= yield %>
   </body>
 </html>
